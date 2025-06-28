@@ -30,7 +30,7 @@ if(process.env.NODE_ENV==="production"){ // make frontend available on the same 
         res.sendFile(path.join(__dirname,"../frontend","dist","index.html"));
     })
 }
-server.listen(PORT, ()=>{
+server.listen(PORT, "0.0.0.0", () => {
     console.log("server is running on port:" + PORT);
-    connectDB()
+    connectDB();
 })
